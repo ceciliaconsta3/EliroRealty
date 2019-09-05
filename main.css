@@ -90,19 +90,93 @@ main {
     max-width: 1100px;
 }
 nav {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* max-width: 1100px; */
+    height: 70px;
+    background-color: #426CB4;
+    color: white;
+}
+nav button {
+    /* border: none; */
+    /* background: transparent; */
+    color: white;
+    width: 50px;
+    height: 40px;
+}
+nav button a {
+    padding: 0 1rem;
+    color: white;  
+}
+nav div {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     max-width: 1100px;
-    width:  100%;
-    margin: 0 auto;
     height: 50px;
-
+    color: white;
 }
-nav div a {
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1100px;
+    height: 50px;
+    color: white;
+}
+nav ul li a {
+    color: white;
     padding: 0 1vw;
 }
+nav span a { color: white; }
+nav div a {
+    padding: 0 1vw;
+    color: white; 
+}
+header { background: #556086; }
+nav button {   
+    width: 40px; 
+    height: 30px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+nav button a { display: none; }
+nav ul { display: none; }
+nav ul li a { 
+    color: white;
+    text-decoration: none;
+}
+nav ul li { list-style: none; }
+#nav-toggle span, 
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 30px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: '';
+}
+#nav-toggle span:before { top: -8px; }
+#nav-toggle span:after { bottom: -8px; }
+#nav-toggle span.active { background: transparent; }
+#nav-toggle  span.active::before,
+#nav-toggle span.active::after { top: 0; }
+#nav-toggle span.active::before { transform: rotate(45deg); }
+#nav-toggle span.active::after { transform: rotate(-45deg); }
+#nav-toggle span, nav ul, #nav-toggle span:before, #nav-toggle span:after { transition: 500ms ease-in-out; }
+nav ul.active { display: block; }
+
+
 section {
     width: 90%;
 }
@@ -132,9 +206,11 @@ body{
     color: #f27649;
     font-weight: bold;
 }
+
 .hero {
     height: 500px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     text-align: center;
     display: flex;
     flex-flow: column wrap;
@@ -169,3 +245,11 @@ content:"\f16d"; // instagram
 content:"\f0e1"; // linkedin
 content:"\f099"; // twitter 
 */
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 650px) {
+    #nav-toggle span { display: none; }
+    nav ul { display: inline-flex; }
+    nav button a { display: flex; }
+}

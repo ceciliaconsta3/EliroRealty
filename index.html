@@ -9,14 +9,19 @@
     <script src="https://use.fontawesome.com/3952651194.js"></script>
 </head>
 <body>
-    <nav>
-        <span><a href="#">Eliro Realty</a><!-- <img class="logo" src="/images/Snippetlogo.png"> --></span>
-        <div>
-            <a href="#cta">Book your rental</a>
-            <a href="#">Property Management</a>
-            <a href="tel:7543076550">754-307-6550</a>
-        </div>
-    </nav>
+    <header>
+        <nav>
+            <button id="nav-toggle">
+                <span></span>
+                <a href="#">Eliro Realty</a>
+            </button>
+            <ul>
+                <li><a href="#cta">Book your rental</a></li>
+                <li><a href="#">Property Management</a></li>
+                <li><a href="tel:7543076550">754-307-6550</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <section class="hero">
         <h1>Eliro Realty</h1>
@@ -103,6 +108,25 @@
         divider.className = "divider";
         const headers = document.getElementsByTagName('h3'); 
 
+    </script>
+<script>
+    window.addEventListener("resize", viewportCheck);
+    
+        function toggleNav() {
+            // classList requires polyfill for older browsers - can't combine inputs
+            document.querySelector("#nav-toggle span").classList.toggle("active");
+            document.querySelector("nav ul").classList.toggle("active");
+            // if (mobile is active but window gets resized > 650) {
+                // disable mobile toggle
+            // }
+        }
+        function viewportCheck() {
+            // console.log(`Viewport check function fired with ${window.innerWidth}`);
+            let isMobile = window.innerWidth <= 650; 
+            return isMobile ? 
+                    document.querySelector("#nav-toggle").addEventListener("click", toggleNav) :
+                    document.querySelector("#nav-toggle").removeEventListener("click", toggleNav);
+        }
     </script>
 </body>
 </html>
