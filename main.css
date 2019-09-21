@@ -42,7 +42,7 @@ html, body {
 h1 {
     font-weight: 700;
     font-size: 100px;
-    line-height: 60px;
+    line-height: 80px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #f27649;
@@ -89,15 +89,15 @@ main {
     margin: 0 auto;
     max-width: 1100px;
 }
-nav {
+header nav {
     width: 100%;
     margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* max-width: 1100px; */
-    height: 70px;
+    max-height: 80px;
+    min-height: 50px;
     background-color: #426CB4;
     color: white;
 }
@@ -163,13 +163,14 @@ nav ul li { list-style: none; }
     width: 30px;
     background: white;
     position: absolute;
+    right: 30px;
     display: block;
     content: '';
 }
-#nav-toggle span:before { top: -8px; }
-#nav-toggle span:after { bottom: -8px; }
+#nav-toggle span:before { top: -8px; right: 0}
+#nav-toggle span:after { bottom: -8px; right: 0;}
 #nav-toggle span.active { background: transparent; }
-#nav-toggle  span.active::before,
+#nav-toggle span.active::before,
 #nav-toggle span.active::after { top: 0; }
 #nav-toggle span.active::before { transform: rotate(45deg); }
 #nav-toggle span.active::after { transform: rotate(-45deg); }
@@ -183,8 +184,10 @@ section {
 header nav a {
     padding: 0 1rem;
 }
-footer {
-    background-color: #f1f5f8;
+footer { background-color: #426CB4;}
+.footer-details,
+.footer-details a {
+    color: white;
     max-width: 100%;
 }
 body{
@@ -201,6 +204,44 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
+.copyright {
+    background-color: #f0edf1;
+    color: #555555;
+    max-width: 100%;
+    padding: 0.5vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-size: 0.75rem;
+}
+.copyright a { color: #555; padding: 0 1vh;}
+.copyright p { padding: 0 1vh}
+.copyright a:hover { color: #375995;}
+.copyright p:nth-of-type(2) img {
+    height: 12px;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    padding-right: 0.5vh;
+}
+.footer-details .logo {
+    font-size: 1rem;
+    padding: 3vh 0;
+}
+.footer-details .logo p {
+    color: white;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.footer-details .logo p:nth-of-type(2) {
+    color: white;
+    text-align: center;
+    font-family: 'Bebas Neue';
+    padding: 0;
+    margin: 0;
+}
 .divider {
     padding-top: 1vh;
     color: #f27649;
@@ -208,7 +249,7 @@ body{
 }
 
 .hero {
-    height: 500px;
+    height: 350px;
     width: 100%;
     margin: 0;
     text-align: center;
@@ -232,11 +273,11 @@ body{
 }
 .footer-icons li,
 .footer-links ul li
-  {
-    display: inline;
+  { display: inline; }
+.footer-icons li {
+    padding: 0 1vh;
 }
-ul
-{
+ul {
     list-style: none;
     padding: 0;
 }
