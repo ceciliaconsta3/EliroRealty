@@ -184,12 +184,14 @@ section {
 header nav a {
     padding: 0 1rem;
 }
+header nav .logo { width: 85px;}
 footer { background-color: #426CB4;}
 .footer-details,
 .footer-details a {
     color: white;
     max-width: 100%;
 }
+.footer-details .logo img{ width: 150px; }
 body{
     text-align: center;
     margin-left: auto;
