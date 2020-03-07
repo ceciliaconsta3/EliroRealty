@@ -10,14 +10,13 @@
 </head>
 <body>
     <header>
-        <nav>
-            <button id="nav-toggle">
+        <nav id="nav-toggle">
+            <button>
                 <span></span>
-                <a href="#"><img class="logo" src="images/logo/White-Bold-Text.png" alt="to home"></a>
+                <a href="/"><img class="logo" src="images/logo/Eliro_Realty___Residential_Property_Management-2.png" alt="to home"></a>
             </button>
             <ul>
-                <li><a href="#cta">Book your rental</a></li>
-                <li><a href="#">Property Management</a></li>
+                <li><a target="_blank" href="https://home.cozy.co/apply/#!/640669">Book Your Rental Today!</a></li>
                 <li><a href="tel:7543076550">754-307-6550</a></li>
             </ul>
         </nav>
@@ -41,28 +40,39 @@
             <h3>We Offer</h3>
             <div class="offers">
                 <div>
-                    <img src="images/undraw_Yacht_8g6r.svg">
+                    <img src="/images/stockart/undraw_Yacht_8g6r.svg">
                     <p>Luxury Materials</p>
                 </div>
                 <div>
-                    <img src="images/undraw_smart_home_28oy.svg">
+                    <img src="images/stockart/undraw_smart_home_28oy.svg">
                     <p>Smart Upgrades</p>   
                 </div>
                 <div>
-                    <img src="images/undraw_Beach_rvmg.svg">
+                    <img src="images/stockart/undraw_Beach_rvmg.svg">
                     <p>Prime Location</p>
                 </div>
             </div>
         </section>
-        <!-- <section id="rentals">
-            <h3>Take a look at our available Pompano Beach Listings</h3>
-            <div id="availableRentals"></div>
-            <div class="overlay-background" style="background-color: rgba(0,0,0,0.8);"></div>
-            <a href="tel:9545555555">954-555-5555</a>
-            <a href="mailto:elirorealty.com">elirorealty@gmail.com</a></p>
-            <button>Learn More</button>
-        </section> -->
+        <section id="rentals">
+            <h3>Take a Look at Our Available Listings</h3>
+                <div id="availableRental" style="position:relative;border-radius:0.5rem; border:1px solid white; box-shadow: 0 0 6px 0 #d7d7d7; margin: 0 auto; height: 30vh; width: 100%;">
+                    <div style="width: 100%; height: 60%; background-image:url(images/property/Redfin-708.png); background-position:center; background-size: cover; background-repeat:no-repeat">
+                    </div>
+                    <div style="border-top:1px solid lightgrey; padding: 1vw 1vw 0; height: 40%;">
+                        <div style="position: absolute; left: 5%; bottom:8%">
+                            <h3 style="font-size: 0.75rem;font-weight: bold;color:#426cb4; text-align: left; padding: 0; margin:0">708 NE 23rd AVE</h3>
+                            <p style="font-size: 0.75rem; padding: 0; margin: 0;"><small>Pompano Beach, FL 33062</small></p>
+                            <p style="font-size: 0.75rem; padding: 0; margin: 0;"><small><a href="https://calendly.com/elirorealty/apartment-tour">Schedule a Tour</a>
+                        </div>
+                        <div style="text-align: right; position: absolute; right: 10%; bottom:15%">
+                            <button style="background-color: #426cb4; border-radius: 0.25rem;"><a target="_blank" style="color:white; padding: 1rem; margin: 0 auto; font-size: 1.2rem;" href="https://home.cozy.co/apply/#!/640669">Apply Today!</a></button>
+                        </div>
+                    </div>
+                </div>
+        </section>
     </main>
+
+    <div style="margin: 40px;"></div>
 
     <footer>
         <div class="footer-details">
@@ -76,26 +86,29 @@
                     <li><a href="https://instagram.com/elirorealty" target="_blank"><i class ="fa fa-instagram" aria-hidden="true"></i></a></li>
                     <li><a href="https://www.linkedin.com/elirorealty" target="_blank"><i class ="fa fa-linkedin" aria-hidden="true"></i></a></li>
                     <li><a href="https://twitter.com/elirorealty" target="_blank"><i class ="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="mailto:pompano@elirorealty.com" target="_blank"><i class ="fa fa-envelope-o" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
-            <nav>
+            <!-- <nav>
                 <ul>
-                    <li><a href="/">Our Company</a></li>
-                    <li><a href="/">Rentals</a></li>
-                    <li><a href="/">Contact</a></li>
-                    <!-- <li><a href="/">Privacy</a></li>
+                    <li><a href="/">Our Company</a></li> 
+                    <li><a href="#rentals">Rentals</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/">Privacy</a></li>
                     <li><a href="/">Accessibility</a></li>
                     <li><a href="/">Website Disclaimer</a></li>
-                    <li><a href="/">Terms of Use</a></li> -->
+                    <li><a href="/">Terms of Use</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
 
         <div class="copyright">
             <p>&copy; <script>document.write(new Date().getFullYear());</script> Eliro Realty, LLC. All rights reserved.</p>
-            <p><img src="images/icon-eho.png">Equal Housing Opportunity</p>
+            <!-- <p><img src="images/logo/icon-eho.png">Equal Housing Opportunity</p> -->
         </div>
+
     </footer>
+
     <script>
         'use strict';
         // https://stackoverflow.com/questions/22754315/for-loop-for-htmlcollection-elements
@@ -103,33 +116,34 @@
         divider.textContent = "///";
         divider.className = "divider";
         const headers = document.getElementsByTagName('h3'); 
-
     </script>
-<script>
-    window.addEventListener("resize", viewportCheck);
-    
-        function toggleNav() {
-            // classList requires polyfill for older browsers - can't combine inputs
-            document.querySelector("#nav-toggle span").classList.toggle("active");
-            document.querySelector("nav ul").classList.toggle("active");
-            // if (mobile is active but window gets resized > 650) {
-                // disable mobile toggle
-            // }
-        }
-        function viewportCheck() {
-            // console.log(`Viewport check function fired with ${window.innerWidth}`);
-            let isMobile = window.innerWidth <= 650; 
-            return isMobile ? 
+    <script>
+        window.addEventListener("resize", viewportCheck);
+        
+            function toggleNav() {
+                // classList requires polyfill for older browsers - can't combine inputs
+                document.querySelector("#nav-toggle span").classList.toggle("active");
+                document.querySelector("nav ul").classList.toggle("active");
+                // if (mobile is active but window gets resized > 650) {
+                    // disable mobile toggle
+                // }
+            }
+            function viewportCheck() {
+                // console.log(`Viewport check function fired with ${window.innerWidth}`);
+                let isMobile = window.innerWidth <= 650; 
+                return isMobile ? 
                     document.querySelector("#nav-toggle").addEventListener("click", toggleNav) :
                     document.querySelector("#nav-toggle").removeEventListener("click", toggleNav);
-        }
-        // TODO: Hamburger view should NOT remain open if screen is resized out of acceptable range
-        // if (hamburger menu is active) {
-        //     apply these styles to header nav {
-        //         padding: 1vh 0 3vh;
-        //     }
-        // }
-        // TODO: Turn font text to png with transparent background: https://www.peko-step.com/en/tool/alphachannel_en.html
+            }
+            // TODO: Hamburger view should NOT remain open if screen is resized out of acceptable range
+            // if (hamburger menu is active) {
+            //     apply these styles to header nav {
+            //         padding: 1vh 0 3vh;
+            //     }
+            // }
+            // TODO: Turn font text to png with transparent background: https://www.peko-step.com/en/tool/alphachannel_en.html
     </script>
 </body>
+
+
 </html>
