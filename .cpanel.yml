@@ -1,6 +1,6 @@
 ---
 deployment:
 tasks:
- - export DEPLOYPATH=/home/elirorealty/eliro-realty/
+ - export DEPLOYPATH=/home/elirorealty/public_html/
  - /bin/cp index.html $DEPLOYPATH
  - /bin/cp main.css $DEPLOYPATH
