@@ -2,9 +2,9 @@
 deployment:
 tasks:
  - export DEPLOYPATH=/home/elirorealty/public_html/
- - /bin/cp index.html $DEPLOYPATH
- - /bin/cp main.css $DEPLOYPATH
- - /bin/cp robots.txt $DEPLOYPATH
+ - /bin/cp -R index.html $DEPLOYPATH
+ - /bin/cp -R main.css $DEPLOYPATH
+ - /bin/cp -R robots.txt $DEPLOYPATH
  - /bin/cp -R fonts $DEPLOYPATH
  - /bin/cp -R images $DEPLOYPATH
 
