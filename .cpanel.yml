@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/elirorealty/public_html/
-    - /bin/cp -r /home/elirorealty/eliro-realty/* $DEPLOYPATH
+    - /bin/cp -r /home/elirorealty/repositories/eliro-realty/* $DEPLOYPATH
