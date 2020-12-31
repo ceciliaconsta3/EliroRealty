@@ -263,7 +263,7 @@ footer { background-color: #426CB4;}
     justify-content: center;
     align-items: center;
 }
-.logo { width: 100%; }
+.logo { max-width: 100%; }
 
 .offers{
     display: flex;
