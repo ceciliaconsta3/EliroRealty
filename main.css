@@ -264,6 +264,8 @@ footer { background-color: #426CB4;}
     justify-content: center;
     align-items: center;
 }
+.hero img { width: 100%; }
+
 .offers{
     display: flex;
     flex-flow: row wrap;
